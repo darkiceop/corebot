@@ -1,0 +1,500 @@
+###############################
+#                             #
+#       CoreBot Config        #
+#                             #
+###############################
+Bot_Token: "NzYxNDg3ODI2MzQwNTQ0NTUy.X3bUzQ.636LPIGxon9ibT32qAU3KnhNvoc"
+# This is your bot application's token. You can get this by going to discord's developer portal, creating an application, then turning the application into a bot.
+Bot_Key: "PUT-BOT-KEY-HERE"
+# This is the bot's key. You can get a key by joining our Discord (https://corebot.dev/support) and verifying that you purchased the bot.
+Bot_Prefix: ","
+# This is the symbol you will have to use to run all of CoreBot's commands.
+Theme_Color: "#ffffff"
+# This is the HEX color that will be used in all the bot's embeds.
+Error_Color: "#f52c2c"
+# This is the HEX color that will be used in all error embeds (Wrong channel, syntax errors, etc.)
+Remove_Command_Messages: "false"
+# If set to true the bot will delete user's messages when they execute a command.
+Staff_Help_Menu: "true"
+# This enables or disables the staff help embed. This embed gets sent when you run the -help command.
+
+
+Require_Commands_Channel: "true"
+# Require Commands to be sent in the bot spam channel
+Commands_Channel: "bot-spam"
+# Bot Commands channel, only needed if Require_Commands_Channel is "true".
+Bypass_Commands_Channel: "Staff"
+# This is the rank required in order to run commands outside of the commands channel.
+
+
+Lock_Commmand_Embed_Special_Color: "true"
+# Setting it to "true" will make the lock command embed green
+Unlock_Command_Embed_Special_Color: "true"
+# Setting it to "true" will make the unlock command embed red
+
+
+Mute_Role: "Muted"
+# This is the role given to muted users.
+Blacklist_Role: "Blacklisted"
+# This is the role given to blacklisted users.
+
+
+### IP Command ###
+Server_IP: "Play.example.com"
+# This is the IP that will be shown in the embed when running the ip command.
+IP_Embed_Header: "Server IP"
+# This is the title of the IP embed.
+
+Chat_Logs_Blacklist:
+  - staff
+# Channels to blacklist from chat logs
+
+######################################
+#                                    #
+#  JOIN / LEAVE EVENT CONFIGURATION  #
+#                                    #
+######################################
+# VARIABLES: (NOTE: This will only work in the Join_Message, Leave_Message and EMBED OPTIONS settings
+# {user} - This will print the user's username. 
+# {tag} - This will print the user's name with their Discord tag (Example: Test#1234)
+# {total} - This will print the total amount of members in the Discord server
+
+# JOIN EVENT:
+
+Join_Messages: "true"
+# This will enable or disable join messages.
+Join_Role: "Member"
+# This is the role given to users when they join. Put "-NONE" to not give a role on join.
+Join_Message_Channel: "join"
+# This is the channel welcome mesages will be sent in.
+Join_Message: "embed"
+# This is the message sent in the join channel when a user joins. If you would like the message to be sent as an embed put "embed".
+DM_Message: "Welcome to the server, {user}!"
+# This is the message DMed to users when they join. Put -NONE to not DM a welcome message to users.
+
+
+### EMBED OPTIONS ###
+# (NOTE: This requires the Join_Message setting to be "embed"
+
+Join_Embed_Header: "User Joined!"
+# This is the title of the embed
+Join_Embed_Description: "Welcome to the Discord server, {user}! "
+# This is the description or main field of the embed
+Join_Embed_Footer: "-NONE"
+# This is the footer of the embed. Put "-NONE" to not have a footer in the embed.
+Join_Embed_Timestamp: "false"
+# This will add the time the user joined at to the embed's footer if set to "true"
+
+### INVITE REWARDS SETTINGS ###
+
+Invite_Rewards_System: "true"
+# This will enable or disable the invite rewards system.
+Invite_Rewards:
+  1: "Inviter"
+  5: "Inviter+"
+  10: "Epic Inviter"
+  15: "Super Inviter"
+  30: "Invite Master"
+# (Invites Needed): (Role)
+# These are the roles given to users when they reach a certain amount of invites. Use the amount of invites as the key and the role as the value.
+
+// LEAVE EVENT:
+
+Leave_Messages: "true"
+# This will enable or disable leave messages.
+Leave_Message_Channel: "leave"
+# This is the channel leave messages will be sent in.
+Leave_Message: "embed"
+# This is the message sent in the leave channel when a user leaves. If you would like the message to be sent as an embed put "embed".
+
+### EMBED OPTIONS ###
+# (NOTE: This requires the Leave_Message_Embed setting to be "true")
+
+Leave_Embed_Header: "User Left!"
+# This is the title of the embed
+Leave_Embed_Description: "Goodbye, **{user}**! "
+# This is the description or main field of the embed
+Leave_Embed_Footer: "-NONE"
+# This is the footer of the embed. Put "-NONE" to not have a footer in the embed.
+Leave_Embed_Timestamp: "false"
+# This will add the time the user joined at to the embed's footer if set to "true"
+
+
+
+########################################
+#                                      #
+#  ADVERTISEMENT SYSTEM CONFIGURATION  #
+#                                      #
+########################################
+
+Anti_Advertisement_System: "true"
+# This will enable or disable the chat anti-advertisement 
+Status_Antiadvertisement_System: "true"
+# This will enable or disable the status anti-advertisement 
+
+Advertisement_Bypass_Role: "Staff"
+Status_Advertisement_Notification_Channel: "detected-advertisements"
+# This is the rank required to bypass the advertisment check. Users with this role will be able to advertise freely!
+Whitelisted_Websites:
+  1: "google.com"
+  2: "gyazo.com"
+# These are websites that bypass the advertisement check. Users will be allow to post links or use these websites in their statuses that are from these sites.
+
+
+
+########################################
+#                                      #
+#  COINS / LEVEL SYSTEM CONFIGURATION  #
+#                                      #
+########################################
+
+Coin_System: "true"
+# This will enable or disable the coin system.
+Coin_Amount: 10
+# This is the amount of coins users will get per message.
+
+### SHOP CONFIG ###
+
+Shop_System: "true"
+# This will enable or disable the shop system. If disabled, this will disable both the shop and buy commands.
+
+Item_1: "vip"
+# This is the name of the item. The user will use this name to buy the item.
+Item_1_Price: 3500
+# This is the coins the user must pay to purchase the item.
+Item_1_Role: "vip"
+# This is the role that will be given when a user purchases the item.
+
+Item_2: "mvp"
+Item_2_Price: 5000
+Item_2_Role: "mvp"
+
+Item_3: "mvp+"
+Item_3_Price: 7500
+Item_3_Role: "mvp+"
+# Want more or less items? Open a ticket in the CoreBot Discord (https://corebot.dev/support) and we'll set it up for you!
+
+ShopEmbed_Header: "Server Shop"
+# This is the title of the shop
+ShopEmbed_Item1_SubTitle: "VIP RANK"
+# This is the sub title of the first item
+ShopEmbed_Item1_Description: "Cost - 3500 coins (Use -buy vip to buy!)"
+# This is the description of the first item
+ShopEmbed_Item2_SubTitle: "MVP RANK"
+ShopEmbed_Item2_Description: "Cost - 5000 coins (Use -buy mvp to buy!)"
+ShopEmbed_Item3_SubTitle: "MVP+ RANK"
+ShopEmbed_Item3_Description: "Cost - 7500 coins (Use -buy mvp+ to buy!)"
+
+### EMBED OPTIONS ###
+# Variables: 
+# {page} - This will print the current page of the leaderboard you're viewing.
+# {totalcoins} - This will print the total amount of coins collected from all users
+
+Coin_Top_Embed_Title: "Coin Leaderboard (Page #{page})"
+# This is the title of the embed
+Coin_Top_Embed_Footer: "Total Coins Collected"
+# Put "-NONE" to not have a footer in the embed. 
+
+
+Level_System: "true"
+# This will enable or disable the level system
+Approximate_XP_Per_Message: 10
+# Approximate_XP_Per_Message is that amount + a random number between 1 and 10 (for example, if the value was 50, the xp value would be between 50-60 per message)
+Level_Roles:
+  5: "Level 5"
+  10: "Level 10"
+  15: "Level 15"
+# These are the roles given to the user when they reach a certain level.
+
+### EMBED OPTIONS ###
+# {page} - This will print the current page of the leaderboard you've viewing.
+# {totalxp} - This will print the total amount of XP collectted from all users.
+
+Leveltop_Embed_Title: "Level Leaderboard (Page #{page})"
+# This is the title of the embed.
+Leveltop_Embed_Footer: "Total XP Collected"
+# Put "-NONE" to not have a footer in the embed.
+
+
+
+####################################
+#                                  #
+#  GIVEAWAYS SYSTEM CONFIGURATION  #
+#                                  #
+####################################
+
+Giveaway_System: "true"
+# This will enable or disable the giveaway system
+Emoji: ":tada:"
+# This is Discord's emoji variable for the emoji that you want users to react to in order to enter the giveaway.
+Emoji_Unicode: "🎉"
+# This is the emoji unicode for the emoji that you want users to react to in order to enter the giveaway.
+Max_Giveaways: 5
+# This is the maximum amount of giveaways you can have running that the same time.
+Giveaway_Create_Required_Rank: "Admin"
+# This is the rank required to run the gcreate command.
+Giveaway_Delete_Required_Rank: "Admin"
+# This is the rank required to run the gdelete command.
+Giveaway_ReRoll_Required_Rank: "Admin"
+# This is the rank required to run the greroll command.
+Giveaway_Channel: "giveaways"
+# This is the channel giveaways will be posted in.
+
+
+
+####################################
+#                                  #
+#    TICKET SYSTEM CONFIGURATION   #
+#                                  #
+####################################
+
+Ticket_System: "true"
+# This will enable or disable the ticket system.
+User_Ticket_Limit: 5
+# This is the limit of tickets a certain user can have open at one time.
+Ticket_Require_Reason: "false"
+# If set to true, users will be required to add a reason when opening a ticket.
+Ticket_Support_Role: "Support Team"
+# This is the role required to see the tickets, run the add, remove, and close command.
+Close_All_Role: "Admin"
+# This is the role required to close all tickets at once.
+Ticket_Category: "Tickets"
+# This is the category tickets will be put in.
+Ticket_Logs_Channel: "ticket-logs"
+# When a ticket is opened or closed a log message will be sent here.
+Ticket_Topic: "**User** {user} **Reason** {reason} **Time** {time} **ID** {id}"
+# Put "-NONE" to not have a ticket topic.
+# VARIABLES: 
+# {user} - User that created the ticket
+# {reason} - Reason the ticket was created for
+# {time} - Time the ticket was created at 
+# {id} - ID of the ticket
+
+### EMBED OPTIONS ###
+
+Ticket_Embed_Title: "Ticket"
+# This is the title of the embed
+Ticket_Embed_Description: "{user}, thank you for creating a support ticket. "
+# This is the description or main field of the embed
+# VARIABLES:
+# {user} - This will print to the user that opened the ticket in the embed description
+# {reason} This will print the user's reason for opening the ticket.
+Ticket_Embed_Footer: "Ticket System"
+# This is the footer of the embed. Put -NONE to not have an embed.
+Ticket_Embed_Timestamp: "true"
+# This will add the time the user joined at to the embed's footer if set to "true"
+
+
+
+####################################
+#                                  #
+#    FILTER SYSTEM CONFIGURATION   #
+#                                  #
+####################################
+
+Filter_System: "true"
+# This will enable or disable the filter system.
+Filter_Bypass_Role: "Staff"
+# This is the rank required to bypass the filter system and say blacklisted words.
+Filter_Required_Rank: "Admin"
+# This is the rank required to run the filter command and edit the filter system.
+
+
+
+####################################
+#                                  #
+#   STATUS COMMAND CONFIGURATION   #
+#                                  #
+####################################
+
+Server_One_Name: "Revivenode SMP"
+Server_One_URL: "https://api.minetools.eu/ping/play.revivenode.com/25565"
+Server_One_Query_URL: "https://api.minetools.eu/ping/play.revivenode.com/25565"
+
+### VV OPEN A TICKET IF YO WANT TO USE THESE OR MORE VV ##
+Gamemode_Two_Name: "Gamemode2"
+Gamemode_Two_URL: "https://api.minetools.eu/ping/play.example.com/25567"
+Gamemode_Two_Query_URL: "https://api.minetools.eu/ping/play.example.com/25567"
+
+Gamemode_Three_Name: "Gamemode3"
+Gamemode_Three_URL: "https://api.minetools.eu/ping/play.example.com/25568"
+Gamemode_Three_Query_URL: "https://api.minetools.eu/ping/play.example.com/25568"
+
+
+
+########################################
+#                                      #
+#  VERIFICATION SYSTEM CONFIGURATION   #
+#                                      #
+########################################
+# NOTE: Be sure to make the Join_Role a role like "Unverified" or "Unregistered" and make that role have proper permissions to only see X channel(s)
+
+Verification_System: "false"
+# This will enable or disable the verification system
+Verification_Role: "Member"
+# This is the role users will get after verifying 
+Verification_Emoji: "✅"
+# This is the emoji users must react with in order to get verified
+Verification_Message_ID: "PUT-MESSAGE-ID-HERE"
+# This is the ID of the message users must react to in order to get verified
+
+####################################
+#                                  #
+#              OTHER               #
+#                                  #
+####################################
+
+### Command Enabler/Disabler ###
+# Commands that are a part of a system can only be disabled by disabling the system.
+Announce_Command: "true"
+Ban_Command: "true"
+Blacklist_Command: "true"
+Bug_Report_Command: "true"
+Clear_Command: "true"
+Help_Command: "true"
+IP_Command: "true"
+Kick_Command: "true"
+Links_Command: "true"
+Lock_Command: "true"
+Mute_Command: "true"
+Say_Command: "true"
+Set_Prefix_Command: "true"
+Set_Status_Command: "true"
+Suggest_Command: "true"
+Unban_Command: "true"
+Unlock_Command: "true"
+Unmute_Command: "true"
+Update_Command: "true"
+Vote_Command: "true"
+Status_Command: "true"
+Report_Command: "true"
+Msg_All_Command: "true"
+Remind_Me_Command: "true"
+Google_Command: "true"
+Temp_Channel_Command: "true"
+Reports_Command: "true"
+Give_Command: "true"
+Take_Command: "true"
+
+
+
+### REQUIRED RANKS ###
+# Commands that have a specific config will have the required ranks in that section.
+
+Ban_Required_Rank: "Mod"
+Unban_Required_Rank: "Mod"
+Kick_Required_Rank: "Mod"
+Staff_Help_Menu_Required_Rank: "Staff"
+Clear_Required_Rank: "Helper"
+Say_Required_Rank: "Admin"
+Accept_Deny_Suggestions: "Admin"
+Update_Required_Rank: "Admin"
+Vote_Required_Rank: "Admin"
+Lock_Required_Rank: "Admin"
+Unlock_Required_Rank: "Admin"
+Mute_Required_Rank: "Mod"
+Unmute_Required_Rank: "Mod"
+Blacklist_Required_Rank: "Mod"
+Announce_Required_Rank: "Admin"
+Set_Status_Required_Rank: "Admin"
+Set_Prefix_Required_Rank: "Owner"
+Bot_Update_Required_Rank: "Owner"
+Prefix_Required_Rank: "Owner"
+Debug_Required_Rank: "Owner"
+Temp_Mute_Required_Rank: "Mod"
+Msg_All_Required_Rank: "Admin"
+Remind_Me_Required_Rank: "Member"
+Google_Required_Rank: "Beta Tester"
+Give_Required_Rank: "Admin"
+Take_Required_Rank: "Admin"
+
+### CHANNELS ###
+Bug_Reports_Channel: "bug-reports"
+# This is the channel bug reports will be sent to.
+Suggestions_Channel: "suggestions"
+# This is the channel suggestions will be set to.
+Updates_Channel: "updates"
+# This is the channel updates will be sent to.
+Vote_Channel: "polls"
+# This is the channel votes will be sent to.
+Announcement_Channel: "announcements"
+# This is the channel announcements will be sent to.
+Punishment_Logs_Channel: "logs"
+# This is the channel punishment logs will be sent to.
+Reports_Channel: "reports"
+# This is the channel reports will be sent to.
+
+
+####################################
+#                                  #
+#       ANNOUNCEMENT COMMAND       #
+#                                  #
+####################################
+
+Announcement_Auto_Tag: "true"
+# This will auto tag @everyone in the announcements channel if set to true.
+
+### EMBED OPTIONS ###
+Announcement_Embed_Thumbnail: "https://images-ext-1.discordapp.net/external/veZptUu_KDKmwtUJX5QT3QxESYCaRp4_k0XUwEQxubo/https/i.imgur.com/e9DIB8e.png"
+# This is the image link that will be put at the top right corner of the embed. Put "-NONE" to not have a thumbnail in the embed.
+# Put "{Bot_PFP}" to use your bot's profile picture. Put "{Executor_PFP}" to use the command executor's profile picture.
+Announcement_Embed_Footer: "Example Network"
+# This is the footer of the embed. Put "-NONE" to not have a footer in the embed.
+Announcement_Embed_Timestamp: "true"
+# This will add the time the announcement was posted to the embed's footer if set to "true"
+Announcement_Embed_Footer_Avater_Image: "true"
+# This will add the command executor's profile picture in the footer of the embed (Will be in a small circle).
+
+
+
+####################################
+#                                  #
+#           LINK COMMAND           #
+#                                  #
+####################################
+
+Website_Link: "https://www.example.com/"
+# This is the link that will be shown in the -link embed. Put "-NONE" if you don't want the website to be shown in the embed!
+Store_Link: "https://store.example.com/"
+# This is the link that will be shown in the -link embed. Put "-NONE" if you don't want the store to be shown in the embed!
+Twitter_Link: "-NONE"
+# This is the link that will be shown in the -link embed. Put "-NONE" if you don't want the twitter to be shown in the embed!
+
+
+
+####################################
+#                                  #
+#             ROLE MENU            #
+#                                  #
+####################################
+
+Role_Menu: "true"
+# This will enable or disable the role menu command.
+Rolemenu_Required_Rank: "Admin"
+# This is the rank required to run the rolemenu command.
+Role_Menu_Roles:
+  Server:
+    🇺: "Updates"
+    🇵: "Polls"
+    🇪: "Events"
+    🎉: "Giveaways"
+  Game:
+    🇲: "Minecraft"
+    🇫: "Fortnite"
+# Use the emoji as the key and the role as the value.
+
+####################################
+#                                  #
+#           TEMP CHANNELS          #
+#                                  #
+####################################
+
+Temp_Channels_Enabled: 'true'
+# Set to 'false' to disable temp channels
+Join_To_Create: 'Temp Channel'
+# The voice channel that users should join to create a temp channel
+Temp_Channel_Category: 'Temp Channels'
+# The category that temp voice channels should go under
+
+#DO NOT CHANGE THIS!
+BOT_VERSION: "3.2.0"

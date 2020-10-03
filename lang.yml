@@ -1,0 +1,265 @@
+####################################
+#                                  #
+#      LANGUAGE CONFIGURATION      #
+#                                  #
+####################################
+
+
+####################################
+#          BASIC MESSAGES          #
+####################################
+Insufficient_Permission_Message: "You do not have permission to run this command."
+# This is the message sent when a user does not have the required permissions to run a command.
+
+####################################
+#    SUGGESTION COMMAND MESSAGES   #
+####################################
+Announcement_Sent: "✅ {user} Announcement sent!"
+# This is the message sent when a user successfully sends an announcement.
+
+####################################
+#        PUNISHMENT MESSAGES       #
+####################################
+No_User: "Please provide a valid user."
+# This is the message sent when a user does not add a user to punish.
+No_Reason: "Please provide a reason"
+# This is the message sent when a user does not add a reason to their punishment.
+User_Is_Staff: "You can not punish a staff member."
+# This is the message sent when a user tries to punish a staff member.
+User_Is_CoreBot: "How dare you try and ban me. I do not approve of this!"
+# This is the message sent when a user tries to ban corebot.
+User_Is_Yourself: "You can not punish yourself."
+# This is the message sent when a user tries to punish themselves.
+
+####################################
+#        SAY COMMAND MESSAGES      #
+####################################
+No_Message_To_Say: "Please provide text for the bot to say!"
+# This is the message sent when a user does not provide text for the bot to say.
+
+####################################
+#      CLEAR COMMAND MESSAGES      #
+####################################
+No_Amount_Of_Messages_To_Clear: "Please provide the amount of messages to delete. "
+# This is the message sent when the user does not add the amount of messages to clear.
+Cleared: "Clear **{amount}** messages."
+# This is the message sent when you clear some messages.
+
+####################################
+#       BUG COMMAND MESSAGES       #
+####################################
+No_Bug_Found: "Please inform us of the bug."
+# This is the message sent when a user does not add the bug in their message.
+Bug_Reported_Reply_Message: "Thanks for reporting the bug!"
+# This is the message sent once a bug is successfully reported.
+
+####################################
+#        BUY COMMAND MESSAGES      #
+####################################
+Invalid_Item: "That is not a valid item."
+# This is the message sent when a user tries to buy an item that does not exist.
+Not_Enough_Coins: "You do not have enough coins for that item!"
+# This is the message sent when a user tries to buy something they can not afford.
+Purchase_Success: "You have successfully purchased {item} for {price} coins."
+# This is the message sent when you purchae an item from the shop.
+Already_Bought: "You have already purchased this item."
+# This is the message sent when a user tries to purchase a role they already bought.
+
+####################################
+#    SUGGESTION COMMAND MESSAGES   #
+####################################
+No_Suggestion_Found: "Please inform us of the suggestion."
+# This is the message sent when a user does not add their idea.
+Suggestion_Made_Reply_Message: "Your suggestion has been added!"
+# This is the message sent once a suggestion is successfully sent in.
+Suggestion_Cooldown_Message: "Please wait 15 minutes before adding another suggestion!"
+# This is the message sent when a user is still on the suggestions cooldown.
+## Suggestions Embed ##
+Suggestion_Embed_Footer: "Use the suggest command to suggest an idea for the server!"
+# This is the footer of the suggestion embed
+
+####################################
+#  ADVERTISEMENT SYSTEM MESSAGES   #
+####################################
+Advertisement_Message: "Advertising is not allowed."
+# This is the message sent when a user tries to advertise/sends a non whitelisted link.
+
+####################################
+#      FILTER SYSTEM MESSAGES      #
+####################################
+Filter_Message: "Sorry, you can not say that."
+# This is the message sent when a user says a blacklisted word.
+
+####################################
+#     GIVEAWAYS SYSTEM MESSAGES    #
+####################################
+Max_Giveaways_Reached_Message: "There is a max of 5 giveaways!"
+# This is the message sent when you've reached the maximum amount of giveaways.
+
+####################################
+#     TEMPMUTE COMMAND MESSAGES    #
+####################################
+Tempmute_Invalid_Mute_Time: "Please add a valid mute duration. Examples"
+# This is the message sent when a user does not provide a valid mute length
+Tempmute_Muted: "{user} has been temporarily muted for {length} for {reason}"
+# VARIABLES: {user}, {length}, and {reason}
+Temp_Mute_Un_Muted: "{user} is now unmuted."
+# VARIABLES: {user}
+
+####################################
+#      SLOTS COMMAND MESSAGES      #
+####################################
+Gamble_No_Amount: "Please provide an amount of coins to gamble!"
+# This is the message sent when a user does not provide an amount of coins to gamble.
+Gamble_Invalid_Amount: "That is not a valid integer!"
+# This is the message sent when the user does use a valid amount.
+Gamble_Atleast_10: "You must gamble at least 10 coins!"
+# This is the message sent when a user tries to gambles less than 10 coins
+Gamble_Not_Enough_Coins: "You do not have that many coins! You only have {coins} coins!"
+# This is the message sent when you do nott have the needed coins to gamble the amount you want to.
+
+####################################
+#      TICKET SYSTEM MESSAGES      #
+####################################
+
+Not_In_Ticket: "This command must be ran in a ticket channel!"
+# This is the message sent when a user runs a ticket only command outside of a tiket channel.
+
+####################################
+#      COINS COMMAND MESSAGES      #
+####################################
+Your_Coins: "You have {coins} coins!"
+# This is the message sent when  
+User_Coins: "{user} has {coins} coins!"
+# This is the message sent when checking a specific user's coins
+# VARIABLES: {user} {coins}
+
+# To remove a command from the help menu, simply erase its command name and settings.
+# For example, if you don't want the ip command then delete all of this:
+#    ip:
+#      usage: "-ip"
+#      description: "Get the IP of the server!"
+
+Help_Command:
+  Regular:
+    help:
+      usage: "-help"
+      description: "View this message"
+    bugreport:
+      usage: "-bugreport"
+      description: "Report a bug found on the server!"
+    coins:
+      usage: "-coins"
+      description: "Check how many coins you have!"
+    ip:
+      usage: "-ip"
+      description: "Get the IP of the server!"
+    level:
+      usage: "-level"
+      description: "Check your current level on the Discord server!"
+    links:
+      usage: "-links"
+      description: "Get important links related to the server!"
+    suggest:
+      usage: "-suggest"
+      description: "Suggest something for the server!"
+    new:
+      usage: "-new"
+      description: "Create a ticket"
+    add:
+      usage: "-add"
+      description: "Add a user to your ticket"
+    remove:
+      usage: "-remove"
+      description: "Remove a user from your ticket"
+    close:
+      usage: "-close"
+      description: "Close your ticket"
+    shop:
+      usage: "-shop"
+      description: "View the shop"
+    buy:
+      usage: "-buy"
+      description: "Purchase an item from the shop"
+    slot:
+      usage: "-slot"
+      description: "Gamble your coins"
+    cointop:
+      usage: "-cointop"
+      description: "View the coin leaderboard"
+    leveltop:
+      usage: "-leveltop"
+      description: "View the level leaderboard"
+    status:
+      usage: "-status"
+      description: "View the status of the minecraft server"
+  Admin:
+    announce:
+      usage: "-announce"
+      description: "Announce an important message to the server in an embed!"
+    ban:
+      usage: "-ban"
+      description: "Ban users from the guild!"
+    unban:
+      usage: "-unban"
+      description: "Unban a user"
+    blacklist:
+      usage: "-blacklist"
+      description: "Blacklist users from talking or texting."
+    clear:
+      usage: "-clear"
+      description: "Clear a certain amount of messages!"
+    install:
+      usage: "-install"
+      description: "Install all needed Channels!"
+    debug:
+      usage: "-debug"
+      description: "Create a debug URL"
+    mute:
+      usage: "-mute"
+      description: "Mute a certain user!"
+    unmute:
+      usage: "-unmute"
+      description: "Unmute a certain user!"
+    tempmute:
+      usage: "-tempmute"
+      description: "Temporarily mute a user!"
+    say:
+      usage: "-say"
+      description: "Create embeded messages!"
+    setprefix:
+      usage: "-setprefix"
+      description: "Set the bot's command prefix!"
+    setstatus:
+      usage: "-setstatus"
+      description: "Set the bot's current status!"
+    update:
+      usage: "-update"
+      description: "Update the users about any changes happening."
+    vote:
+      usage: "-vote"
+      description: "Create a poll/vote for your users to vote on."
+    gcreate:
+      usage: "-gcreate"
+      description: "Create giveaways"
+    gdelete:
+      usage: "-gdelete"
+      description: "Delete giveaways"
+    greroll:
+      usage: "-greroll"
+      description: "Reroll a finished giveaway"
+    filter:
+      usage: "-filter"
+      description: "Manage the word filter"
+    key:
+      usage: "-key"
+      description: "Install an addon"
+    kick:
+      usage: "-kick"
+      description: "Kick a user"
+    lock:
+      usage: "-lock"
+      description: "Turn on lockdown mode for a channel"
+    unlock:
+      usage: "-unlock"
+      description: "Turn off lockdown mode for a channel"
